@@ -24,3 +24,4 @@ export default class Document extends PureComponent {
     );
   }
 }
+
