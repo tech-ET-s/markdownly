@@ -7,7 +7,7 @@ export const updateFormInput = title => ({
 export const ADD_MD_FILE = 'ADD_MD_FILE';
 export const addMdFile = (title) => ({
   type: ADD_MD_FILE,
-  payload: { title, body: '' }
+  payload: { title, body: '', isActive: false }
 });
 
 export const CLEAR_FORM_INPUT = 'CLEAR_FORM_INPUT';
@@ -20,4 +20,10 @@ export const UPDATE_MD_BODY = 'UPDATE_MD_BODY';
 export const updateMdBody = (body, index) => ({
   type: UPDATE_MD_BODY,
   payload: { body, index }
+});
+
+export const UPDATE_ACTIVE_STATUS = 'UPDATE_ACTIVE_STATUS';
+export const updateActiveStatus = (index) => ({
+  type: UPDATE_ACTIVE_STATUS,
+  payload: index 
 });
