@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AddMarkdown component form to save a markdown obj 1`] = `
+<form
+  onSubmit={[Function]}
+>
+  <input
+    onChange={[Function]}
+    value="Hellow"
+  />
+  <button>
+    +
+  </button>
+</form>
+`;
