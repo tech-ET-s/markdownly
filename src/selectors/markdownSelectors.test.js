@@ -1,4 +1,4 @@
-import { getFormInput, getMdFiles } from './addMdSelector';
+import { getFormInput, getMdFiles, getBody } from './addMdSelector';
 
 describe('addMdSelector test', () => {
   it('gets form input state', () => {
@@ -35,5 +35,23 @@ describe('addMdSelector test', () => {
       title: 'bye',
       body: 'bad body'
     }]);
+  });
+
+  it('gets body by index', () => {
+    const state = {
+      inputAndList: {
+        mdArray: [{
+          title: 'hello',
+          body: 'hot body'
+        }, {
+          title: 'bye',
+          body: 'bad body'
+        }]
+      }
+    };
+
+    const array = getBody(state, 1);
+
+    expect(array).toEqual('bad body');
   });
 });
