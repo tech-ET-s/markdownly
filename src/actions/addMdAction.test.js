@@ -1,4 +1,4 @@
-import { UPDATE_FORM_INPUT, updateFormInput, addMdFile, ADD_MD_FILE } from './addMdActions';
+import { UPDATE_FORM_INPUT, updateFormInput, addMdFile, ADD_MD_FILE, clearFormInput, CLEAR_FORM_INPUT } from './addMdActions';
 
 describe('addMdActions test', () => {
   it('returns state of input', () => {
@@ -16,6 +16,15 @@ describe('addMdActions test', () => {
     expect(action).toEqual({
       type: ADD_MD_FILE,
       payload: { title: 'title', body: '' }
+    });
+  });
+
+  it('returns empty string', () => {
+    const action = clearFormInput();
+
+    expect(action).toEqual({
+      type: CLEAR_FORM_INPUT,
+      payload: ''
     });
   });
 });
