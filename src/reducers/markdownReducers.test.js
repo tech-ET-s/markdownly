@@ -1,5 +1,5 @@
 import addMdReducer from './AddMdReducer';
-import { updateFormInput, addMdFile } from '../actions/addMdActions';
+import { updateFormInput, addMdFile, updateMdBody } from '../actions/addMdActions';
 
 describe('addMdReducer tests', () => {
   it('returns default state', () => {
@@ -35,6 +35,17 @@ describe('addMdReducer tests', () => {
     const action = addMdFile('Hello');
 
     const newState = addMdReducer(state, action);
-    expect(newState).toEqual({ formInput: '', mdArray: [{ title: 'Title', body: 'Hello' }, { title: 'Hello', body: '' }] });
+    expect(newState).toEqual({ mdArray: [{ title: 'Title', body: 'Hello' }, { title: 'Hello', body: '' }] });
+  });
+
+  it('updates body within mdArray obj by index', () => {
+    const state = {
+      mdArray: [{ title: 'Title', body: 'Hello' }, { title: 'bye', body: 'bad body' }]
+    };
+
+    const action = updateMdBody('good body', 1);
+
+    const newState = addMdReducer(state, action);
+    expect(newState).toEqual({ mdArray: [{ title: 'Title', body: 'Hello' }, { title: 'bye', body: 'good body' }] });
   });
 });
