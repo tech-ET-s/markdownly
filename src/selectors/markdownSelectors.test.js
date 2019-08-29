@@ -1,6 +1,6 @@
-import { getFormInput, getMdFiles, getBody } from './addMdSelector';
+import { getFormInput, getMdFiles, getBody } from './markdownSelectors';
 
-describe('addMdSelector test', () => {
+describe('markdownSelectors test', () => {
   it('gets form input state', () => {
     const state = {
       inputAndList: {

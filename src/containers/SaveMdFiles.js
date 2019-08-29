@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import AddMarkdown from '../components/form/AddMarkdown';
-import { getFormInput } from '../selectors/addMdSelector';
-import { updateFormInput, addMdFile, clearFormInput } from '../actions/addMdActions';
+import { getFormInput } from '../selectors/markdownSelectors';
+import { updateFormInput, addMdFile, clearFormInput } from '../actions/markdownActions';
 
 const mapStateToProps = state => ({
   formInput: getFormInput(state)

@@ -1,7 +1,7 @@
-import addMdReducer from './AddMdReducer';
-import { updateFormInput, addMdFile, updateMdBody } from '../actions/addMdActions';
+import markdownReducers from './markdownReducers';
+import { updateFormInput, addMdFile, updateMdBody } from '../actions/markdownActions';
 
-describe('addMdReducer tests', () => {
+describe('markdownReducers tests', () => {
   it('returns default state', () => {
     const state = {
       formInput: 'Hello'
@@ -12,7 +12,7 @@ describe('addMdReducer tests', () => {
       payload: 'hmmm'
     };
 
-    const newState = addMdReducer(state, action);
+    const newState = markdownReducers(state, action);
     expect(newState).toEqual(state);
   });
 
@@ -23,7 +23,7 @@ describe('addMdReducer tests', () => {
 
     const action = updateFormInput('Hell');
 
-    const newState = addMdReducer(state, action);
+    const newState = markdownReducers(state, action);
     expect(newState).toEqual({ formInput: 'Hell' });
   });
 
@@ -34,7 +34,7 @@ describe('addMdReducer tests', () => {
 
     const action = addMdFile('Hello');
 
-    const newState = addMdReducer(state, action);
+    const newState = markdownReducers(state, action);
     expect(newState).toEqual({ mdArray: [{ title: 'Title', body: 'Hello' }, { title: 'Hello', body: '' }] });
   });
 
@@ -45,7 +45,7 @@ describe('addMdReducer tests', () => {
 
     const action = updateMdBody('good body', 1);
 
-    const newState = addMdReducer(state, action);
+    const newState = markdownReducers(state, action);
     expect(newState).toEqual({ mdArray: [{ title: 'Title', body: 'Hello' }, { title: 'bye', body: 'good body' }] });
   });
 });

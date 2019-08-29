@@ -1,4 +1,13 @@
-import { UPDATE_FORM_INPUT, updateFormInput, addMdFile, ADD_MD_FILE, clearFormInput, CLEAR_FORM_INPUT, updateMdBody, UPDATE_MD_BODY } from './addMdActions';
+import {
+  UPDATE_FORM_INPUT,
+  updateFormInput,
+  addMdFile,
+  ADD_MD_FILE,
+  clearFormInput,
+  CLEAR_FORM_INPUT,
+  updateMdBody,
+  UPDATE_MD_BODY
+} from './markdownActions';
 
 describe('addMdActions test', () => {
   it('returns state of input', () => {
