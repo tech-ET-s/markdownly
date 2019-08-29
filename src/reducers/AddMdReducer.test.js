@@ -35,6 +35,6 @@ describe('addMdReducer tests', () => {
     const action = addMdFile('Hello');
 
     const newState = addMdReducer(state, action);
-    expect(newState).toEqual({ mdArray: [{ title: 'Title', body: 'Hello' }, { title: 'Hello', body: '' }] });
+    expect(newState).toEqual({ formInput: '', mdArray: [{ title: 'Title', body: 'Hello' }, { title: 'Hello', body: '' }] });
   });
 });
