@@ -4,6 +4,7 @@ exports[`MardownList component render mardown list 1`] = `
 <ul>
   <li
     key="0"
+    onClick={[Function]}
   >
     <h1>
       calling
@@ -11,6 +12,7 @@ exports[`MardownList component render mardown list 1`] = `
   </li>
   <li
     key="1"
+    onClick={[Function]}
   >
     <h1>
       bluf
