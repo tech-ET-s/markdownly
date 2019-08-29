@@ -1,8 +1,6 @@
 import { combineReducers } from 'redux';
-import markdown from './markdownReducer';
-import inputAndList from './AddMdReducer';
+import inputAndList from './markdownReducers';
 
 export default combineReducers({
-  markdown,
   inputAndList
 });
