@@ -6,17 +6,17 @@ import styles from './Document.css';
 
 export default class Document extends PureComponent {
   static propTypes = {
-    text: PropTypes.string.isRequired,
+    markdown: PropTypes.string.isRequired,
     updateMarkdown: PropTypes.func.isRequired
   };
 
   render() {
-    const { text, updateMarkdown } = this.props;
+    const { markdown, updateMarkdown } = this.props;
     return (
       <>
         <div className={styles.Document}>
-          <Editor markdown={text} updateMarkdown={updateMarkdown} />
-          <Preview markdown={text} />
+          <Editor markdown={markdown} updateMarkdown={updateMarkdown} />
+          <Preview markdown={markdown} />
         </div>
       </>
     );
