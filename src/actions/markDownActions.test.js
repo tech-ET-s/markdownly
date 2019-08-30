@@ -9,7 +9,7 @@ import {
   UPDATE_MD_BODY
 } from './markdownActions';
 
-describe('addMdActions test', () => {
+describe('markdownActions test', () => {
   it('returns state of input', () => {
     const action = updateFormInput('title');
 
@@ -24,7 +24,7 @@ describe('addMdActions test', () => {
 
     expect(action).toEqual({
       type: ADD_MD_FILE,
-      payload: { title: 'title', body: '' }
+      payload: { title: 'title', body: '', isActive: false }
     });
   });
 

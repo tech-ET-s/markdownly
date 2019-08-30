@@ -11,8 +11,8 @@ function AddMarkdown({ formInputSubmit, formInputChange, formInput }) {
 }
 
 AddMarkdown.propTypes = {
-  formInputSubmit: PropTypes.func.isRequired,
   formInput: PropTypes.string.isRequired,
+  formInputSubmit: PropTypes.func.isRequired,
   formInputChange: PropTypes.func.isRequired
 };
 

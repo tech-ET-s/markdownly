@@ -1,8 +1,14 @@
-import { UPDATE_FORM_INPUT, ADD_MD_FILE, CLEAR_FORM_INPUT, UPDATE_MD_BODY } from '../actions/markdownActions';
+import { 
+  UPDATE_FORM_INPUT,
+  ADD_MD_FILE,
+  CLEAR_FORM_INPUT,
+  UPDATE_MD_BODY,
+  UPDATE_ACTIVE_STATUS
+} from '../actions/markdownActions';
 
 const initialState = {
   formInput: '',
-  mdArray: [{ title: 'Title', body: '# Hello' }]
+  mdArray: [{ title: 'Title', body: '# Hello', isActive: true }]
 };
 
 export default function reducer(state = initialState, action) {
@@ -18,6 +24,12 @@ export default function reducer(state = initialState, action) {
         return i === action.payload.index ?
           { ...state.mdArray[i], body: action.payload.body } :
           md;
+      }) };
+    case UPDATE_ACTIVE_STATUS:
+      return { ...state, mdArray: state.mdArray.map((_, i) => {
+        return i === action.payload ?
+          { ...state.mdArray[i], isActive: true } :
+          { ...state.mdArray[i], isActive: false };
       }) };
     default:
       return state;
