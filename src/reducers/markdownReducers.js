@@ -21,7 +21,7 @@ export default function reducer(state = initialState, action) {
       return { ...state, formInput: action.payload };
     case UPDATE_MD_BODY:
       return { ...state, mdArray: state.mdArray.map((md, i) => {
-        return i === action.payload.index ?
+        return md.isActive ?
           { ...state.mdArray[i], body: action.payload.body } :
           md;
       }) };

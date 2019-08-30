@@ -9,6 +9,7 @@ const mapStatetoProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
   clickHandler(index) {
+    
     dispatch(updateActiveStatus(index));
   }
 });
