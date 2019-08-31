@@ -17,9 +17,9 @@ export const clearFormInput = () => ({
 });
 
 export const UPDATE_MD_BODY = 'UPDATE_MD_BODY';
-export const updateMdBody = (body, index) => ({
+export const updateMdBody = (body) => ({
   type: UPDATE_MD_BODY,
-  payload: { body, index }
+  payload: { body }
 });
 
 export const UPDATE_ACTIVE_STATUS = 'UPDATE_ACTIVE_STATUS';
